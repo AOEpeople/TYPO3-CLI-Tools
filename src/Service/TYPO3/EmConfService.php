@@ -90,6 +90,6 @@ class EmConfService
      */
     protected function normalize($path)
     {
-        return trim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
+        return rtrim($path, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR;
     }
 }
