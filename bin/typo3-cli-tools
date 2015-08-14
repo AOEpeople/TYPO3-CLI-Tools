@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+namespace AOE\TYPO3CLITools;
+
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    if (file_exists(__DIR__ . '/../../../autoload.php')) {
+        require_once __DIR__ . '/../../../autoload.php';
+    }
+}
+
+use AOE\TYPO3CLITools\Command\EmConfCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+$application->add(new EmConfCommand());
+$application->run();
