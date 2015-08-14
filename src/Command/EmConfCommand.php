@@ -58,7 +58,7 @@ class EmConfCommand extends Command
             );
         }
 
-        if ($input->hasOption('version-number')) {
+        if ($input->getOption('version-number')) {
             if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
                 $output->writeln(
                     sprintf(
@@ -69,6 +69,7 @@ class EmConfCommand extends Command
             }
             $service->updateVersion($input->getOption('version-number'));
         }
+
         $service->write();
     }
 }
