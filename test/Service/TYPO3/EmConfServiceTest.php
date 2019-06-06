@@ -5,11 +5,12 @@ use AOE\TYPO3CLITools\Service\TYPO3\EmConfService;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 use org\bovigo\vfs\vfsStreamFile;
+use PHPUnit\Framework\TestCase;
 
 /**
  * @package AOE\TYPO3CLITools\Service\TYPO3
  */
-class EmConfServiceTest extends \PHPUnit_Framework_TestCase
+class EmConfServiceTest extends TestCase
 {
     /**
      * @var vfsStreamDirectory
